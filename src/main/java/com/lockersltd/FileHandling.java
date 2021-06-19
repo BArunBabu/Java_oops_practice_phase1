@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class FileHandling {
 
     public boolean createFile(String fileName) {
-        File file = new File("/Users/anjilakshmi/Downloads/Java_oops_practice_phase1/Files/" + fileName+".txt");
+        File file = new File("/Users/arun/Downloads/Java_oops_practice_phase1/Files/" + fileName+".txt");
         try {
             file.createNewFile();
             System.out.println("Your file has been created successfully at location :" + file.getAbsolutePath() + "\n");
@@ -21,7 +21,7 @@ public class FileHandling {
     }
 
     public boolean deleteFile(String fileName) throws FileException {
-        File file = new File("/Users/anjilakshmi/Downloads/lockersltd/Files" + fileName);
+        File file = new File("/Users/arun/Downloads/lockersltd/Files" + fileName);
 
         if (file.exists()) {
             String filePath = file.getAbsolutePath();
@@ -36,7 +36,7 @@ public class FileHandling {
 
     public void searchFile(String fileName) throws FileException {
 
-        File file = new File("/Users/anjilakshmi/Downloads/lockersltd/Files" + fileName);
+        File file = new File("/Users/arun/Downloads/lockersltd/Files" + fileName);
         if (file.exists()) {
             System.out.println("Your file is found at location  :" + file.getAbsolutePath() + "\n");
         } else {
@@ -46,7 +46,7 @@ public class FileHandling {
 
     public boolean updateFile(String fileName) throws IOException {
 
-        File file = new File("/Users/anjilakshmi/Downloads/lockersltd/Files" + fileName);
+        File file = new File("/Users/arun/Downloads/lockersltd/Files" + fileName);
         System.out.println("Write the data you want to insert in file and type enter if you are finished");
         FileOutputStream out = new FileOutputStream(file);
         Scanner sc = new Scanner(System.in);
@@ -64,7 +64,7 @@ public class FileHandling {
     }
 
     public String[] getFilesinAscending() throws FileException {
-        File file = new File("/Users/anjilakshmi/Downloads/lockersltd/Files");
+        File file = new File("/Users/arun/Downloads/lockersltd/Files");
         String allFiles[] = file.list();
         if (allFiles == null || allFiles.length == 0)
             throw new FileException("No files available to fetch");
@@ -81,7 +81,7 @@ public class FileHandling {
     }
 
     public void readFile(String fileName) throws IOException {
-        FileInputStream fis = new FileInputStream("/Users/anjilakshmi/Downloads/lockersltd/Files" + fileName);
+        FileInputStream fis = new FileInputStream("/Users/arun/Downloads/lockersltd/Files" + fileName);
         int i = 0;
         while ((i = fis.read()) != -1) {
             System.out.print((char) i);

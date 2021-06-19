@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class FileRunner extends FileHandling {
 
     public static void makeDirectory() throws IOException {
-        Path path = Paths.get("/Users/anjilakshmi/Downloads/Java_oops_practice_phase1/Files");
+        Path path = Paths.get("/Users/arun/Downloads/Java_oops_practice_phase1/Files");
         Files.createDirectory(path);
     }
 
